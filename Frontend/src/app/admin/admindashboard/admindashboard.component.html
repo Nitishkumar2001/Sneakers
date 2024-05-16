@@ -1,0 +1,49 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="container second">
+  <div class="row mb-4">
+    <div class="col-12">
+      <h2 class="text-center">Product Management</h2>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Product Code</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col" class="img-url-column">Image Url</th>
+          <th scope="col">Manage Products</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ product.brand }}</td>
+          <td>{{ product.productCode }}</td>
+          <td>{{ product.productDescription }}</td>
+          <td>&#8377;{{ product.price }}</td>
+          <td class="img-url-container">{{ product.imgUrl }}</td>
+          <td>
+            <button class="btn btn-primary btn-sm me-2" (click)="editProduct(product)">Edit</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-3">
+  <div class="container text-center">
+    <p>&copy; 2024 The Sneaker Head. All rights reserved.</p>
+  </div>
+</footer>
+
+<ng-container *ngIf="showEditModal">
+  <app-edit-product [product]="selectedProduct" (closeModal)="closeModal()" (productUpdated)="onProductUpdated()"></app-edit-product>
+</ng-container>

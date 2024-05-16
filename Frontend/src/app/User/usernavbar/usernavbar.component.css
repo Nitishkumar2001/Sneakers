@@ -1,0 +1,37 @@
+.hello {
+  margin-left: 500px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-link.text-white {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link.text-white:hover {
+  color: #fff;
+}
+
+.navbar-bg-custom {
+  background-color: #0f0f0f !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

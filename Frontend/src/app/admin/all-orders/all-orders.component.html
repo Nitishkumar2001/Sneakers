@@ -1,0 +1,28 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container my-5 second">
+    <h2>All Orders</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ORDER ID</th>
+          <th>USER ID</th>
+          <th>PRODUCT ID</th>
+          <th>PRODUCT PRICE</th>
+          <th>QUANTITY</th>
+          <th>TOTAL PRICE</th>
+          <th>Created Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderId }}</td>
+          <td>{{ order.userId }}</td>
+          <td>{{ order.productId }}</td>
+          <td>{{ order.productPrice }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.totalPrice }}</td>
+          <td>{{ order.orderDate | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

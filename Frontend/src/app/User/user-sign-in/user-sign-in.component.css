@@ -1,0 +1,124 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 56px;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://wallpaper.dog/large/11000080.jpg');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(1.5px);
+}
+
+.panel {
+  min-height: 420px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 24px;
+  background-color: #f0f0f0;
+  padding: 48px;
+  width: 420px;
+}
+
+.panel-heading {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 500;
+  color: #333;
+}
+
+#forget {
+  min-width: 100px;
+  margin-left: auto;
+  text-decoration: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#forget:hover {
+  color: #0056b3;
+}
+
+.form-inline label {
+  padding-left: 12px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 15px;
+  color: #555;
+}
+
+.btn {
+  margin-top: 28px;
+  border-radius: 24px;
+  font-size: 17px;
+  padding: 12px 28px;
+  background-image: linear-gradient(to right, #ff6b6b, #ffa500, #ffff00);
+  border: none;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, #ff4c4c, #ff8f00, #ffef00);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.6);
+}
+
+.input-field {
+  border-radius: 24px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.input-field:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.input-field.error {
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+
+input[type='email'],
+input[type='password'] {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 0 12px;
+}
+
+img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 14px;
+}
+
+.store {
+  margin-left: 120px;
+  color: #333;
+}
+
+.text-center {
+  color: #0056b3;
+  font-weight: 500;
+  margin-top: 24px;
+}
